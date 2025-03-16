@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: url("C:\Users\kalba\Downloads\Traveling photo\Train Background.jpeg"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #f4f4f9; 
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); 
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Train Booking</h1>
+  <form action="#" method="POST">
+  
+    <label for="departure">Departure Station:</label>
+    <input id="departure" name="departure" list="stations" required placeholder="Select or type a station">
+    <datalist id="stations">
+      <option value="New Delhi (NDLS)">
+      <option value="Mumbai Central (MMCT)">
+      <option value="Chennai Central (MAS)">
+      <option value="Howrah Junction (HWH)">
+      <option value="Pune Junction (PUNE)">
+      <option value="Ahmedabad Junction (ADI)">
+      <option value="Secunderabad Junction (SC)">
+      <option value="Visakhapatnam Junction (VSKP)">
+      <option value="Lucknow Junction (LJN)">
+      <option value="Solapur">
+      <option value="Nagpur CR">
+      <option value="Sambalpur">
+      <option value="Rayagada">
+      <option value="Bhusawal">
+      <option value="Chatrapati Sambhaji Nagar">
+      <option value="Purna Junction">
+    </datalist>
+
+    
+    <label for="arrival">Arrival Station:</label>
+    <input id="arrival" name="arrival" list="stations" required placeholder="Select or type a station">
+
+    
+    <label for="date">Travel Date:</label>
+    <input type="date" id="date" name="date" required>
+
+  
+    <label for="passengers">Number of Passengers:</label>
+    <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+
+    
+    <label for="class">Class:</label>
+    <select id="class" name="class" required>
+      <option value="economy">Economy</option>
+      <option value="business">Business</option>
+      <option value="first-class">First Class</option>
+      <option value="general">General</option>
+    </select>
+
+    
+    <button type="submit">Book Now</button>
+  </form>
+</body>
+</html>
